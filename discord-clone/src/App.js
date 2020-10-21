@@ -14,7 +14,6 @@ function App() {
 
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
-      console.log(authUser);
       if (authUser) {
         dispatch(login({
           uid: authUser.uid,
@@ -23,10 +22,10 @@ function App() {
           displayName: authUser.displayName
         }))
       } else {
-
+        dispatch(logout())
       }
     })
-  }, [])
+  }, [dispatch])
 
   return (
     <div className="app">
