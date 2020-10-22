@@ -6,6 +6,11 @@
 	height: 100vh;
 }
 
+.chat__messages {
+	--ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
 .chat__input {
 	color: lightgray;
 	display: flex;
@@ -41,5 +46,6 @@
 }
 
 .chat__messages {
-	flex: 1
+	flex: 1;
+	overflow-y: scroll;
 }
